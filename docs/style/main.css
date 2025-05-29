@@ -19,9 +19,13 @@
     }
 }
 
+.logo {
+    max-width: 512px;
+}
+
 body {
     padding: 110px;
     font-size: 32px;
     text-align: center;
-    color: pink;
+    color: #ee96c0;
 }
