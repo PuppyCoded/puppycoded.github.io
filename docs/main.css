@@ -11,6 +11,12 @@
 
 * {
     font-family: "Puppies Play", cursive;
+    background-color: #454545;
+
+    ::selection {
+        background: rgba(255, 192, 203, 0.69);
+        color: #EEE;
+    }
 }
 
 body {
