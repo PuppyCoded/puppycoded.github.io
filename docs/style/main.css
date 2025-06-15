@@ -1,31 +1,73 @@
 ﻿
 /* Default Imports */
-@import url('https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap');
+@import "fonts.css";
 
-/* Fonts */
-.puppies-play-regular {
-    font-family: "Puppies Play", cursive;
-    font-weight: 400;
-    font-style: normal;
+/* Variables */
+:root {
+    --main-font-family: "Ubuntu", sans-serif;
+    --main-font-weight: 400;
+    --main-font-size: 1rem;
+
+    --body-color: #EEE;
+    --heading-color: #EE96C0;
+    --selection-color: var(--body-color);
+    --selection-background-color: rgba(255, 192, 203, 0.69);
+
+    --background-main: #333333;
+    --background-trans: rgba(255, 192, 203, 0.1);
+
+    --body-padding: 4rem 6rem;
 }
 
 * {
-    font-family: "Puppies Play", cursive;
-    background-color: #454545;
+    font-family: var(--main-font-family), sans-serif;
 
     ::selection {
-        background: rgba(255, 192, 203, 0.69);
-        color: #EEE;
+        background: var(--selection-background-color);
+        color: var(--selection-color);
     }
+}
+
+body {
+    margin: 0;
+    color: var(--body-color);
 }
 
 .logo {
     max-width: 512px;
 }
 
-body {
-    padding: 110px;
-    font-size: 32px;
-    text-align: center;
-    color: #ee96c0;
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--background-main) url("../img/boop.svg") no-repeat center bottom/80%;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        /*background-color: rgba(20, 16, 14, 0.98);*/
+        background-color: rgba(44, 36, 40, 0.99);
+        /* #2C2428 */
+    }
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    padding: var(--body-padding);
+
+    &.about {
+        background-color: var(--background-trans);
+    }
 }
