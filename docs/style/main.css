@@ -16,7 +16,8 @@
     --background-main: #333333;
     --background-trans: rgba(255, 192, 203, 0.1);
 
-    --body-padding: 4rem 6rem;
+    --body-padding: 2rem 6rem;
+    --head-padding: 2rem 6rem;
 }
 
 * {
@@ -66,6 +67,21 @@ body {
 
 .container {
     padding: var(--body-padding);
+
+    h1, h2, h3, h4, h5, h6, p {
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.header {
+        padding: var(--head-padding);
+    }
 
     &.about {
         background-color: var(--background-trans);
